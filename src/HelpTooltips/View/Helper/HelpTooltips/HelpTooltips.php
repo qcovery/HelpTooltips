@@ -14,7 +14,7 @@ class HelpTooltips extends \Laminas\View\Helper\AbstractHelper
         $this->helpTooltipsConfig = parse_ini_file(realpath(getenv('VUFIND_LOCAL_DIR') . '/config/vufind/HelpTooltips.ini'), true);
         $this->sessionManager = $sessionManager;
         $this->session = new \Laminas\Session\Container(
-            'HelpTooltips', $essionManager
+            'HelpTooltips', $sessionManager
         );
     }
 
