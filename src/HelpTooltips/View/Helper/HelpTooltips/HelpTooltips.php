@@ -4,7 +4,7 @@
  */
 namespace HelpTooltips\View\Helper\HelpTooltips;
 
-class HelpTooltips extends \Zend\View\Helper\AbstractHelper
+class HelpTooltips extends \Laminas\View\Helper\AbstractHelper
 {
     protected $helpTooltipsConfig;
     protected $session;
@@ -13,7 +13,7 @@ class HelpTooltips extends \Zend\View\Helper\AbstractHelper
     {
         $this->helpTooltipsConfig = parse_ini_file(realpath(getenv('VUFIND_LOCAL_DIR') . '/config/vufind/HelpTooltips.ini'), true);
         $this->sessionManager = $sessionManager;
-        $this->session = new \Zend\Session\Container(
+        $this->session = new \Laminas\Session\Container(
             'HelpTooltips', $essionManager
         );
     }
