@@ -28,7 +28,7 @@
 namespace HelpTooltips\View\Helper\HelpTooltips;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
  * SearchBox helper factory.
@@ -64,7 +64,7 @@ class HelpTooltipsFactory implements FactoryInterface
         $config = $container->get('VuFind\Config\PluginManager');
         $memory = $container->get('VuFind\Search\Memory');
         return new $requestedName(
-            $config, $memory, [$container->get('Zend\Session\SessionManager')]
+            $config, $memory, $container->get('Laminas\Session\SessionManager')
         );
     }
 }
