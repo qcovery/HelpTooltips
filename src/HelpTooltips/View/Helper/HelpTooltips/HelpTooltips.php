@@ -7,6 +7,7 @@ namespace HelpTooltips\View\Helper\HelpTooltips;
 class HelpTooltips extends \Laminas\View\Helper\AbstractHelper
 {
     protected $helpTooltipsConfig;
+    protected $sessionManager;
     protected $session;
 
     /**
